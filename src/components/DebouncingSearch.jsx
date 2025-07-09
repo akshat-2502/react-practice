@@ -23,7 +23,7 @@ const DebouncingSearch = () => {
     <div>
       <input
         type="text"
-        placeholder="Search Here"
+        placeholder="Debouncing Search"
         onChange={(e) => setQuery(e.target.value)}
         value={query}
       />

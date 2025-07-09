@@ -3,6 +3,7 @@ import SearchText from "./components/SearchText";
 import Counter from "./components/Counter";
 import CounterUseReducer from "./components/CounterUseReducer";
 import ParentInput from "./components/ParentInput";
+import DebouncingSearch from "./components/DebouncingSearch";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Counter />
       <CounterUseReducer />
       <ParentInput />
+      <DebouncingSearch />
     </>
   );
 };

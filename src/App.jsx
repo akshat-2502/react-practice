@@ -6,6 +6,7 @@ import ParentInput from "./components/ParentInput";
 import DebouncingSearch from "./components/DebouncingSearch";
 import CustomHookParent from "./components/CustomHookParent";
 import ForceUpdate from "./components/ForceUpdate";
+import RemainingText from "./components/RemainingText";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <DebouncingSearch />
       <CustomHookParent />
       <ForceUpdate />
+      <RemainingText />
     </>
   );
 };

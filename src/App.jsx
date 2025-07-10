@@ -7,6 +7,7 @@ import DebouncingSearch from "./components/DebouncingSearch";
 import CustomHookParent from "./components/CustomHookParent";
 import ForceUpdate from "./components/ForceUpdate";
 import RemainingText from "./components/RemainingText";
+import Dropdown from "./components/Dropdown";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <CustomHookParent />
       <ForceUpdate />
       <RemainingText />
+      <Dropdown />
     </div>
   );
 };

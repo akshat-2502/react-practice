@@ -5,6 +5,7 @@ import CounterUseReducer from "./components/CounterUseReducer";
 import ParentInput from "./components/ParentInput";
 import DebouncingSearch from "./components/DebouncingSearch";
 import CustomHookParent from "./components/CustomHookParent";
+import ForceUpdate from "./components/ForceUpdate";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <ParentInput />
       <DebouncingSearch />
       <CustomHookParent />
+      <ForceUpdate />
     </>
   );
 };

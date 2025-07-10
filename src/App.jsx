@@ -10,7 +10,7 @@ import RemainingText from "./components/RemainingText";
 
 const App = () => {
   return (
-    <>
+    <div className="bg-zinc-950 text-zinc-300">
       <SearchText />
       <Counter />
       <CounterUseReducer />
@@ -19,7 +19,7 @@ const App = () => {
       <CustomHookParent />
       <ForceUpdate />
       <RemainingText />
-    </>
+    </div>
   );
 };
 

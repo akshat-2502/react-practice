@@ -21,7 +21,7 @@ const RemainingText = () => {
         onInput={handleInput}
         maxLength={limit}
       />
-      <p ref={remainingText}>{limit} characters remaining</p>
+      <p ref={remainingText}>{limit} char remaining</p>
     </div>
   );
 };

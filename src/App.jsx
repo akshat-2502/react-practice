@@ -11,6 +11,7 @@ import Dropdown from "./components/Dropdown";
 import { UserProvider } from "./context/UserContext";
 import DisplayUser from "./components/DisplayUser";
 import UseMemo from "./components/UseMemo";
+import UseCalllbackOptimization from "./components/UseCalllbackOptimization";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Dropdown />
         <DisplayUser />
         <UseMemo />
+        <UseCalllbackOptimization />
       </div>
     </UserProvider>
   );

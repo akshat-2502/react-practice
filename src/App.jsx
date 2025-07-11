@@ -8,20 +8,25 @@ import CustomHookParent from "./components/CustomHookParent";
 import ForceUpdate from "./components/ForceUpdate";
 import RemainingText from "./components/RemainingText";
 import Dropdown from "./components/Dropdown";
+import { UserProvider } from "./context/UserContext";
+import DisplayUser from "./components/DisplayUser";
 
 const App = () => {
   return (
-    <div className="bg-zinc-950 text-zinc-300">
-      <SearchText />
-      <Counter />
-      <CounterUseReducer />
-      <ParentInput />
-      <DebouncingSearch />
-      <CustomHookParent />
-      <ForceUpdate />
-      <RemainingText />
-      <Dropdown />
-    </div>
+    <UserProvider>
+      <div className="bg-zinc-950 text-zinc-300">
+        <SearchText />
+        <Counter />
+        <CounterUseReducer />
+        <ParentInput />
+        <DebouncingSearch />
+        <CustomHookParent />
+        <ForceUpdate />
+        <RemainingText />
+        <Dropdown />
+        <DisplayUser />
+      </div>
+    </UserProvider>
   );
 };
 

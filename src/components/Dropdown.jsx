@@ -21,9 +21,13 @@ const Dropdown = () => {
 
   console.log(country, city);
   return (
-    <div>
+    <div className="pb-10">
       <h2>Dropdown</h2>
-      <select value={country} onChange={handleCountryChange}>
+      <select
+        className="border p-2"
+        value={country}
+        onChange={handleCountryChange}
+      >
         <option value={""}>Select Country</option>
         {Object.keys(countryCityData).map((country) => (
           <option value={country} key={country}>
@@ -32,7 +36,12 @@ const Dropdown = () => {
         ))}
       </select>
 
-      <select value={city} onChange={cityChange} disabled={!country}>
+      <select
+        className="border p-2 ml-5"
+        value={city}
+        onChange={cityChange}
+        disabled={!country}
+      >
         <option value="">Select City</option>
         {country &&
           countryCityData[country].map((city) => (

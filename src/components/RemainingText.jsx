@@ -11,7 +11,7 @@ const RemainingText = () => {
     remainingText.current.innerText = `${remaining} characters remaining`;
   };
   return (
-    <div>
+    <div className="mb-10">
       <h2>Remaining Text</h2>
       <textarea
         placeholder="Type here"
@@ -20,6 +20,7 @@ const RemainingText = () => {
         cols="40"
         onInput={handleInput}
         maxLength={limit}
+        className="border"
       />
       <p ref={remainingText}>{limit} char remaining</p>
     </div>

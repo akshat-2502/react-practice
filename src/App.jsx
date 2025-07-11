@@ -10,6 +10,7 @@ import RemainingText from "./components/RemainingText";
 import Dropdown from "./components/Dropdown";
 import { UserProvider } from "./context/UserContext";
 import DisplayUser from "./components/DisplayUser";
+import UseMemo from "./components/UseMemo";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <RemainingText />
         <Dropdown />
         <DisplayUser />
+        <UseMemo />
       </div>
     </UserProvider>
   );

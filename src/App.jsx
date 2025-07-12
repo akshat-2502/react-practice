@@ -29,6 +29,7 @@ const App = () => {
         <DisplayUser />
         <UseMemo />
         <UseCalllbackOptimization />
+        <Counter />
       </div>
     </UserProvider>
   );

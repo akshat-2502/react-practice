@@ -12,6 +12,7 @@ import { UserProvider } from "./context/UserContext";
 import DisplayUser from "./components/DisplayUser";
 import UseMemo from "./components/UseMemo";
 import UseCalllbackOptimization from "./components/UseCalllbackOptimization";
+import ClassBasedCounter from "./components/ClassBasedComponent";
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const App = () => {
         <DisplayUser />
         <UseMemo />
         <UseCalllbackOptimization />
-        <Counter />
+        <ClassBasedCounter />
       </div>
     </UserProvider>
   );

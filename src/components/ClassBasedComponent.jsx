@@ -1,6 +1,6 @@
 import React from "react";
 
-class Counter extends React.Component {
+class ClassBasedCounter extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,11 +25,21 @@ class Counter extends React.Component {
       <div>
         <h1>Class based component</h1>
         <h2>{this.state.count}</h2>
-        <button onClick={this.increment}>Increase</button>
-        <button onClick={this.decrement}>Decrease</button>
+        <button
+          className="px-5 py-2 bg-blue-500 font-bold rounded-xl mr-2"
+          onClick={this.increment}
+        >
+          Increase
+        </button>
+        <button
+          className="px-5 py-2 bg-blue-500 font-bold rounded-xl mr-2"
+          onClick={this.decrement}
+        >
+          Decrease
+        </button>
       </div>
     );
   }
 }
 
-export default Counter;
+export default ClassBasedCounter;

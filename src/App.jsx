@@ -14,6 +14,7 @@ import UseMemo from "./components/UseMemo";
 import UseCalllbackOptimization from "./components/UseCalllbackOptimization";
 import ClassBasedCounter from "./components/ClassBasedComponent";
 import HigherOrderComponent from "./components/HigherOrderComponent";
+import HigherOrderComponentLoading from "./components/HigherOrderComponentLoading";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
         <UseCalllbackOptimization />
         <ClassBasedCounter />
         <HigherOrderComponent />
+        <HigherOrderComponentLoading />
       </div>
     </UserProvider>
   );

@@ -12,6 +12,10 @@ const Pagination = () => {
     }
   };
 
+  const handlePage = (index) => {
+    setPage(index);
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -19,7 +23,7 @@ const Pagination = () => {
   return (
     <div>
       {products.length > 0 && (
-        <div className="flex flex-wrap items-center justify-center">
+        <div className="flex flex-wrap items-center justify-center ">
           {products.slice(page * 10 - 10, page * 10).map((item) => (
             <span>
               <img src={item.thumbnail} alt="" />
@@ -30,10 +34,18 @@ const Pagination = () => {
       )}
 
       {products.length > 0 && (
-        <div className="flex justify-center items-center mt-10 pb-10">
+        <div className="flex justify-center gap-10 items-center mt-10 pb-10">
           <span>◀️</span>
           {[...Array(products.length / 10)].map((_, index) => {
-            return <span key={index}>{index + 1}</span>;
+            return (
+              <span
+                onClick={() => handlePage(index + 1)}
+                className="bg-white text-black px-2 cursor-pointer"
+                key={index}
+              >
+                {index + 1}
+              </span>
+            );
           })}
           <span>▶️</span>
         </div>

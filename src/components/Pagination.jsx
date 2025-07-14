@@ -3,12 +3,16 @@ import React, { useEffect, useState } from "react";
 const Pagination = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   const fetchProducts = async () => {
-    const res = await fetch("https://dummyjson.com/products?limit=100");
+    const res = await fetch(
+      `https://dummyjson.com/products?limit=10&skip=${page * 10 - 10}`
+    );
     const data = await res.json();
     if (data && data.products) {
       setProducts(data.products);
+      setTotalPages(Math.ceil(data.total / 10));
     }
   };
 
@@ -19,24 +23,24 @@ const Pagination = () => {
   const handlePrevious = () => {
     if (page > 1) {
       setPage(page - 1);
-    } else setPage(products.length / 10);
+    } else setPage(totalPages);
   };
 
   const handleNext = () => {
-    if (page < products.length / 10) {
+    if (page < totalPages) {
       setPage(page + 1);
     } else setPage(1);
   };
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [page]);
 
   return (
     <div>
       {products.length > 0 && (
         <div className="flex flex-wrap items-center justify-center ">
-          {products.slice(page * 10 - 10, page * 10).map((item) => (
+          {products.map((item) => (
             <span>
               <img src={item.thumbnail} alt="" />
               <span>{item.title}</span>
@@ -46,9 +50,9 @@ const Pagination = () => {
       )}
 
       {products.length > 0 && (
-        <div className="flex justify-center gap-10 items-center mt-10 pb-10">
+        <div className="flex justify-center gap-5 items-center mt-10 pb-10">
           <span onClick={handlePrevious}>◀️</span>
-          {[...Array(products.length / 10)].map((_, index) => {
+          {[...Array(totalPages)].map((_, index) => {
             return (
               <span
                 onClick={() => handlePage(index + 1)}

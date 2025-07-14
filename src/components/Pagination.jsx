@@ -15,7 +15,7 @@ const Pagination = () => {
     fetchProducts();
   }, []);
 
-  return <div>Pagination</div>;
+  return <div></div>;
 };
 
 export default Pagination;

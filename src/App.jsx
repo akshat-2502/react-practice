@@ -15,6 +15,7 @@ import UseCalllbackOptimization from "./components/UseCalllbackOptimization";
 import ClassBasedCounter from "./components/ClassBasedComponent";
 import HigherOrderComponent from "./components/HigherOrderComponent";
 import HigherOrderComponentLoading from "./components/HigherOrderComponentLoading";
+import Pagination from "./components/Pagination";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <ClassBasedCounter />
         <HigherOrderComponent />
         <HigherOrderComponentLoading />
+        <Pagination />
       </div>
     </UserProvider>
   );

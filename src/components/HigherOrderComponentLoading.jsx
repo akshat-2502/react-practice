@@ -22,7 +22,7 @@ const HigherOrderComponentLoading = () => {
   }, []);
 
   return (
-    <div>
+    <div className="pb-10">
       <UserListWithLoading isLoading={loadimg} users={users} />
     </div>
   );

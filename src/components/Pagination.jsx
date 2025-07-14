@@ -15,7 +15,20 @@ const Pagination = () => {
     fetchProducts();
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      {products.length > 0 && (
+        <div>
+          {products.map((item) => (
+            <span>
+              <img src={item.thumbnail} alt="" />
+              <span>{item.title}</span>
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Pagination;

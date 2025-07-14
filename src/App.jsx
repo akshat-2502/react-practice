@@ -16,6 +16,7 @@ import ClassBasedCounter from "./components/ClassBasedComponent";
 import HigherOrderComponent from "./components/HigherOrderComponent";
 import HigherOrderComponentLoading from "./components/HigherOrderComponentLoading";
 import Pagination from "./components/Pagination";
+import DropdownValueInTextbox from "./components/DropdownValueInTextbox";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <HigherOrderComponent />
         <HigherOrderComponentLoading />
         <Pagination />
+        <DropdownValueInTextbox />
       </div>
     </UserProvider>
   );

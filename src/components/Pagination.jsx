@@ -16,6 +16,18 @@ const Pagination = () => {
     setPage(index);
   };
 
+  const handlePrevious = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    } else setPage(products.length / 10);
+  };
+
+  const handleNext = () => {
+    if (page < products.length / 10) {
+      setPage(page + 1);
+    } else setPage(1);
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -35,19 +47,23 @@ const Pagination = () => {
 
       {products.length > 0 && (
         <div className="flex justify-center gap-10 items-center mt-10 pb-10">
-          <span>◀️</span>
+          <span onClick={handlePrevious}>◀️</span>
           {[...Array(products.length / 10)].map((_, index) => {
             return (
               <span
                 onClick={() => handlePage(index + 1)}
-                className="bg-white text-black px-2 cursor-pointer"
+                className={`bg-white text-black px-2 cursor-pointer ${
+                  page === index + 1
+                    ? "text-red-500 font-extrabold scale-110"
+                    : ""
+                } `}
                 key={index}
               >
                 {index + 1}
               </span>
             );
           })}
-          <span>▶️</span>
+          <span onClick={handleNext}>▶️</span>
         </div>
       )}
     </div>

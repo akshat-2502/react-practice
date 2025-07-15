@@ -17,6 +17,7 @@ import HigherOrderComponent from "../components/HigherOrderComponent";
 import HigherOrderComponentLoading from "../components/HigherOrderComponentLoading";
 import Pagination from "../components/Pagination";
 import DropdownValueInTextbox from "../components/DropdownValueInTextbox";
+import AddingDataToState from "../components/AddingDataToState";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
       <HigherOrderComponentLoading />
       <Pagination />
       <DropdownValueInTextbox />
+      <AddingDataToState />
     </div>
   );
 };
